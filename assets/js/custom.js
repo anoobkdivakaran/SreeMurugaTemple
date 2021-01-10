@@ -2,7 +2,7 @@ $(document).ready(function() {
     var paras = readParameter();
     if (paras != null) {
         var id = paras.split("-");
-        bindTopicHeader(id[1].replace("_", " "));
+        bindTopicHeader(decodeURIComponent(id[1].replace("_", " ")));
         BindImage(id[0]);
     } else {
         $("viewImage").html('').append("No more images")
@@ -25,13 +25,13 @@ function BindImage(folderName) {
     var html = "";
     switch (folderName) {
         case "1":
-            imageCount = 7;
+            imageCount = 4;
             break;
         case "2":
-            imageCount = 12;
+            imageCount = 4;
             break;
         case "3":
-            imageCount = 5;
+            imageCount = 4;
             break;
     }
     for (i = 1; i <= imageCount; i++) {
