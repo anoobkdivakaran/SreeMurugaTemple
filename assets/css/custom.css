@@ -14,9 +14,3 @@ th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-
-.donate {
-    background-color: white;
-    font-size: initial;
-    padding: 5px;
-}
